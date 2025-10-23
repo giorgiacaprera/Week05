@@ -19,7 +19,7 @@ def main(page : ft.Page):
     def btnAdd(e):
         value = textIn.value # LEGGO QUANTO INSERITO DALL'UTENTE
         tempCheckbox = Checkbox(label=value)
-        # page.controls.append(tempCheckbox)
+        #page.controls.append(tempCheckbox)
         # ANZICHE' AGGIUNGERE ALLA page POSSO AGGIUNGERE AD UNA ListView
         lv.controls.append(Row([tempCheckbox], ft.MainAxisAlignment.START))
         page.update()
@@ -34,7 +34,7 @@ def main(page : ft.Page):
     page.controls.append(row1)
     #page.add(row1) # EQUIVALENTE A controls.append()
 
-    page.add(lv)
+    page.controls.append(lv) #page.add(lv)
 
 
 
