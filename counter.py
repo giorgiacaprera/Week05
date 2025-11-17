@@ -1,7 +1,6 @@
 import flet as ft
 from flet.core import page, row
 
-
 def main(page : ft.Page):
     page.window.width = 400
     page.window.height = 300
@@ -28,7 +27,6 @@ def main(page : ft.Page):
         currentVal = currentVal + 1
         textOut.value = currentVal
         textOut.update()
-
 
     btnMinus = ft.IconButton(icon = ft.Icons.REMOVE_CIRCLE_ROUNDED,
                              icon_size = 24, icon_color = "green",

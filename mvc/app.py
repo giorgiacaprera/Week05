@@ -9,9 +9,8 @@ def main(page : ft.Page):
     v = View(page)
     #v.inizializzaGUI()
     c = Controller(v, m);
-    v.impostaController(c) # IN MODO CHE NELLA VIEW SI POSSA AVERE ACCESSO AGLI HANDLER
-    v.inizializzaGUI() # DOPO AVER IMPOSTATO IL CONTROLLER
+    v.impostaController(c) # In modo che nella View si possa avere accesso agli Handler
+    v.inizializzaGUI() # Dopo aver impostato il controller
     v.aggiornaTextValue(0)
-
 
 ft.app(target=main)

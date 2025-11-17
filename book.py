@@ -1,4 +1,3 @@
-
 class Book:
     def __init__(self, title, author, year, pages):
         self._title = title
@@ -18,13 +17,10 @@ class Book:
         return f"{self._title}, {self._author}, {self._year}, {self._pages}"
 
     def __eq__(self, other):
-        # ALGORITMO DI CONFRONTO, PIU' O MENO COMPLESSO
-        return self._title == other._title and self._author == other._author # ...
+        return self._title == other._title and self._author == other._author
 
     def __lt__(self, other):
-        # ALGORITMO DI ORDINAMENTO, ES. PER ANNO CRESC., E PER PAGINE DECRESC.
         if self._year == other._year:
             return self._pages > other._pages
         else:
             return self._year < other._year
-

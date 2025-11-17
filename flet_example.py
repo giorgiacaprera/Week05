@@ -1,29 +1,26 @@
 from time import sleep
-
 import flet as ft
 
 def main(page : ft.Page):
-    # CREO UN OGGETTO/CONTROLLO DI TIPO Text
     myText = ft.Text(value = "Hello world!",
                      size = 50,
                      color = "red")
-    # LO AGGIUNGO ALLA PAGINA
+    # Aggiungo il controllo alla pagina
     page.controls.append( myText )
-    # DEVO RICORDARMI DI AGGIORNARE LA PAGINA
+    # Aggiorno la pagine
     page.update()
 
     myText.color = "blue"
-    #sleep(5)
+    sleep(5) # Pausa di 5 secondi
     myText.update()
 
-    # DEFINISCO LA FUNZIONE EVENT HANDLER DEL CLICK SUL PULSANTE btnPress
+    # Definisco la funzione EVENT HANDLER del CLICK sul pulsante btnPress
     def btnPressHandler(e):
         print("Button pressed")
         myText.color = "green"
         myText.update()
 
-                                                    # INDICO LA FUNZIONE EVENT HANDLER
-    btnPress = ft.ElevatedButton(text="Premi qui!", on_click=btnPressHandler )
+    btnPress = ft.ElevatedButton(text="Premi qui!", on_click=btnPressHandler)
     page.controls.append(btnPress)
     page.update()
 
